@@ -5,6 +5,15 @@ It helps you understand what's happening inside Hibernate engine. Build on tests
 - easy to debug
 - easy to analize
 
+```java
+	@Test
+	public void sampleTest() {
+		doInTransaction(() -> {
+			em.persist(new Car());
+		});
+	}
+```
+
 Detailed logging is available as well:
 ```
 [2594 ms] SQL: drop table car if exists
